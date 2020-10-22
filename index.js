@@ -18,14 +18,12 @@ const decrement = () => {
 incrementBtn.addEventListener("click", increment);
 decrementBtn.addEventListener("click", decrement);
 
-const response = fetch("https://api.openbrewerydb.org/breweries").then(
-  (response) => {
-    response.json().then((breweries) => {
-      breweries.forEach((brewery) => {
-        const el = document.createElement("li");
-        el.innerText = brewery.name;
-        breweriesList.appendChild(el);
-      });
+fetch("https://api.openbrewerydb.org/breweries").then((response) => {
+  response.json().then((breweries) => {
+    breweries.forEach((brewery) => {
+      const el = document.createElement("li");
+      el.innerText = brewery.name;
+      breweriesList.appendChild(el);
     });
-  }
-);
+  });
+});
