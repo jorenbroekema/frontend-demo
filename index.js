@@ -1,3 +1,5 @@
+import "@material/mwc-button";
+
 const countElem = document.getElementById("count");
 const incrementBtn = document.getElementById("increment");
 const decrementBtn = document.getElementById("decrement");
